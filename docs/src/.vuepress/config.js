@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Iiro Alhonen',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -34,29 +34,39 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Blog',
+        link: '/blog/'
       },
       {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Work',
+        link: '/work/'
       }
     ],
+    displayAllHeaders: true,
     sidebar: {
-      '/guide/': [
+      '/blog/': [
         {
-          title: 'Guide',
+          title: '2021',
+          path: '/blog/2021/',
           collapsable: false,
+          sidebarDepth: 2,
           children: [
-            '',
-            'using-vue',
+            ['blog/2021/Road-to-my-first-iOS-job', 'Road to my first iOS job']
           ]
         }
       ],
+      '/work/': [
+        {
+          title: 'Apps',
+          path: '/work/apps/',
+          collapsable: false,
+          children: [
+            '/',
+            ['/Bean-Juice', 'Bean Juice'],
+            ['/Nifty-Markdown-Formatter', 'Nifty Markdown Formatter']
+          ]
+        }
+      ]
     }
   },
 
